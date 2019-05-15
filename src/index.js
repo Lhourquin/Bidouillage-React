@@ -40,10 +40,66 @@ class Clock extends React.Component {
     }
 }
 
+function ActionClick(){
+
+    function handleClick(e) {
+        e.preventDefault();
+        console.log('Le lien a été cliqué.')
+    }
+
+    
+        return (
+            <a href="#" onClick={handleClick}>
+                Clique ici
+            </a>
+        )
+}
+
+class Toggle extends React.Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            isToggleOn: true
+        };
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick() {
+        this.setState(state => ({
+            isToggleOn: !state.isToggleOn
+        }));
+    }
+
+    render() {
+        return(
+            <button onClick={this.handleClick}>
+                {this.state.isToggleOn ? 'ON' : 'OFF'}
+            </button>
+        )
+    }
+}
+
+class Element extends React.Component {
+
+
+    render(){
+        return (
+            <div>
+                <Clock/>
+                <ActionClick/>
+                <Toggle/>
+                <Clock/>
+                <Clock/>
+            </div>
+        )
+    }
+}
+
 
 ReactDOM.render(
-    <Clock 
-    />,
+    <Element/>,
     document.getElementById('root')
 
 );
