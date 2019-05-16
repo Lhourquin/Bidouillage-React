@@ -13,7 +13,7 @@ class App extends Component {
             const unreadMessages = props.unreadMessages;
             return(
                 <div>
-                    <h1>Bonjour !</h1>
+                    <h1>Exemple  Mailbox</h1>
                     {unreadMessages.length > 0 && 
                     <h2>
                         Vouavez {unreadMessages.length} message(s) non lu(s).

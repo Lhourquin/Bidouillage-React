@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import UserProfile from './UserProfile';
 
 ReactDOM.render(
     <App/>,
@@ -8,5 +9,9 @@ ReactDOM.render(
 
 );
 
+ReactDOM.render(
+    <UserProfile  />,
+    document.getElementById('list')
+);
 
 
