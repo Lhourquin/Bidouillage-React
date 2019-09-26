@@ -5,6 +5,7 @@ import Toggle from './Toggle';
 import LoginControl from './LoginControl';
 import Page from './Page'
 
+
 class App extends Component {
 
     render() {
@@ -24,7 +25,7 @@ class App extends Component {
         }
 
         const messages = ['sdf', 'gfd','hui,','trtro'];
-
+ 
         return (
             <div>
                 <Clock/>
@@ -33,6 +34,7 @@ class App extends Component {
                 <Page/>
                 <LoginControl/>
                 <Mailbox unreadMessages={messages}/>
+               
             </div>
         )
     }
